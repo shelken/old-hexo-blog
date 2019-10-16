@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>哈哈哈哈哈O(∩_∩)O哈！😁 | ShelkenBlog</title>
+<title>JavaScript 学习笔记 | ShelkenBlog</title>
 <meta name="description" content="项目在：&lt;a href = &#34;https://github.com/shelken/shelken.github.io&#34; target=&#34;_blank&#34;&gt;GithubPage&lt;/a&gt;">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -81,27 +81,54 @@
       <div class="sm-12 md-8 col">
         <div class="paper">
           <article class="article">
-            <h1>哈哈哈哈哈O(∩_∩)O哈！😁</h1>
+            <h1>JavaScript 学习笔记</h1>
             <p class="article-meta">
-              2019-10-13
-              
-                <a href="https://shelken.github.io/tag/2CBp18WDD" class="badge warning">
-                  第一
-                </a>
+              2019-10-16
               
             </p>
             
-              <img src="https://shelken.github.io/post-images/hello-gridea.jpg" alt="哈哈哈哈哈O(∩_∩)O哈！😁">
-            
             <div class="post-content">
-              <p>第一个page😊😃😄😇🙂😚😎😎🤓😟😟😟😟😟😕😕😠😤</p>
-<!-- more -->
-<figure data-type="image" tabindex="1"><img src="https://shelken.github.io/post-images/1570960051691.jpg" alt=""></figure>
+              <p>##关于作用域</p>
+<ul>
+<li>let:定义一个块级作用域，表示作用域只有一个块，</li>
+<li>const:定义一个常量，值不可更改。作用域同样</li>
+<li>var: 局部作用域与全局。</li>
+</ul>
+<pre><code class="language-javascript">'use strict';
+
+function foo() {
+    for (var i=0; i&lt;100; i++) {
+        //
+    }
+    i += 100; // 仍然可以引用变量i
+}
+'use strict';
+
+function foo() {
+    var sum = 0;
+    for (let i=0; i&lt;100; i++) {
+        sum += i;
+    }
+    // SyntaxError:
+    i += 1;
+}
+</code></pre>
 
             </div>
           </article>
         </div>
         <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://shelken.github.io/post/sublime-text-3-bu-fen-chang-yong-kuai-jie-jian">
+                <h3 class="post-title">
+                  Sublime Text 3 部分常用快捷键
+                </h3>
+              </a>
+            </div>
           
         </div>
         
@@ -173,7 +200,7 @@
           IDEA
         </a>
       
-        <a href="https://shelken.github.io/tag/VJXVswabaJ" class="badge warning">
+        <a href="https://shelken.github.io/tag/VJXVswabaJ" class="badge ">
           快捷键
         </a>
       
