@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shelken.github.io</id>
     <title>ShelkenBlog</title>
-    <updated>2019-10-16T13:43:21.889Z</updated>
+    <updated>2019-10-16T13:45:47.100Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shelken.github.io"/>
     <link rel="self" href="https://shelken.github.io/atom.xml"/>
@@ -11,44 +11,11 @@
     <icon>https://shelken.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, ShelkenBlog</rights>
     <entry>
-        <title type="html"><![CDATA[JavaScript 学习笔记]]></title>
-        <id>https://shelken.github.io/post/javascript-xue-xi-bi-ji</id>
-        <link href="https://shelken.github.io/post/javascript-xue-xi-bi-ji">
-        </link>
-        <updated>2019-10-16T01:56:56.000Z</updated>
-        <content type="html"><![CDATA[<p>##关于作用域</p>
-<ul>
-<li>let:定义一个块级作用域，表示作用域只有一个块，</li>
-<li>const:定义一个常量，值不可更改。作用域同样</li>
-<li>var: 局部作用域与全局。</li>
-</ul>
-<pre><code class="language-javascript">'use strict';
-
-function foo() {
-    for (var i=0; i&lt;100; i++) {
-        //
-    }
-    i += 100; // 仍然可以引用变量i
-}
-'use strict';
-
-function foo() {
-    var sum = 0;
-    for (let i=0; i&lt;100; i++) {
-        sum += i;
-    }
-    // SyntaxError:
-    i += 1;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Sublime Text 3 部分常用快捷键]]></title>
         <id>https://shelken.github.io/post/sublime-text-3-bu-fen-chang-yong-kuai-jie-jian</id>
         <link href="https://shelken.github.io/post/sublime-text-3-bu-fen-chang-yong-kuai-jie-jian">
         </link>
-        <updated>2019-10-15T15:14:13.000Z</updated>
+        <updated>2019-10-16T13:45:39.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1操作">1.操作</h2>
 <p>Ctrl + `： 打开Sublime Text控制台（Esc退出）<br>
 Ctrl+Shift+P：打开命令面板（Esc退出）<br>
@@ -111,6 +78,39 @@ Alt + Shift + 8进行上下分屏<br>
 Alt + Shift + 5进行上下左右分屏（即分为四屏）<br>
 Ctrl + 数字键： 跳转到指定屏<br>
 Ctrl + Shift + 数字键： 将当前屏移动到指定屏</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript 学习笔记]]></title>
+        <id>https://shelken.github.io/post/javascript-xue-xi-bi-ji</id>
+        <link href="https://shelken.github.io/post/javascript-xue-xi-bi-ji">
+        </link>
+        <updated>2019-10-16T13:44:42.000Z</updated>
+        <content type="html"><![CDATA[<p>##关于作用域</p>
+<ul>
+<li>let:定义一个块级作用域，表示作用域只有一个块，</li>
+<li>const:定义一个常量，值不可更改。作用域同样</li>
+<li>var: 局部作用域与全局。</li>
+</ul>
+<pre><code class="language-javascript">'use strict';
+
+function foo() {
+    for (var i=0; i&lt;100; i++) {
+        //
+    }
+    i += 100; // 仍然可以引用变量i
+}
+'use strict';
+
+function foo() {
+    var sum = 0;
+    for (let i=0; i&lt;100; i++) {
+        sum += i;
+    }
+    // SyntaxError:
+    i += 1;
+}
+</code></pre>
 ]]></content>
     </entry>
     <entry>
