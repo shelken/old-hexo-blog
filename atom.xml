@@ -2,14 +2,54 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shelken.github.io</id>
     <title>ShelkenBlog</title>
-    <updated>2019-10-20T03:15:00.273Z</updated>
+    <updated>2020-06-13T18:26:16.574Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shelken.github.io"/>
     <link rel="self" href="https://shelken.github.io/atom.xml"/>
     <subtitle>项目在：&lt;a href = &quot;https://github.com/shelken/shelken.github.io&quot; target=&quot;_blank&quot;&gt;GithubPage&lt;/a&gt;</subtitle>
     <logo>https://shelken.github.io/images/avatar.png</logo>
     <icon>https://shelken.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, ShelkenBlog</rights>
+    <rights>All rights reserved 2020, ShelkenBlog</rights>
+    <entry>
+        <title type="html"><![CDATA[群晖相关配置]]></title>
+        <id>https://shelken.github.io/post/qun-hui-xiang-guan-pei-zhi</id>
+        <link href="https://shelken.github.io/post/qun-hui-xiang-guan-pei-zhi">
+        </link>
+        <updated>2020-06-13T15:26:32.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="群晖安装-emby">群晖安装 EMBY</h3>
+<p>原文地址 <a href="https://post.smzdm.com/p/ax08eov9/">安装 EMBY 教程</a><br>
+emby官方github 说明:<a href="https://github.com/MediaBrowser/Wiki/wiki/Synology-:-Custom-Package-Architectures-for-XPEnology">github</a>.</p>
+<p><a href="https://synology.emby.media/?package_repository=360efc6e-de72-4073-b603-2bfbd7001586&amp;package_architecture=xpen-core2">群晖 emby链接</a></p>
+<h3 id="群晖社区套件">群晖社区套件</h3>
+<p><a href="http://packages.synocommunity.com/">群晖社区套件</a></p>
+<h3 id="transmission配置">transmission配置</h3>
+<p>原文地址:<a href="https://post.smzdm.com/p/aqndk95v/">链接</a><br>
+主要是主题美化<br>
+<code>wget https://raw.githubusercontent.com/ronggang/transmission-web-control/master/release/install-tr-control-cn.sh</code></p>
+<h3 id="calibre-webserver">calibre-webserver</h3>
+<figure data-type="image" tabindex="1"><img src="https://shelken.github.io/post-images/1592071010422.png" alt="映射"></figure>
+<h3 id="ubuntu">ubuntu</h3>
+<p>源:<br>
+<code>#阿里源 deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</code></p>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="群晖安装-emby">群晖安装 EMBY</h3>
+<p>原文地址 <a href="https://post.smzdm.com/p/ax08eov9/">安装 EMBY 教程</a><br>
+emby官方github 说明:<a href="https://github.com/MediaBrowser/Wiki/wiki/Synology-:-Custom-Package-Architectures-for-XPEnology">github</a>.</p>
+<p><a href="https://synology.emby.media/?package_repository=360efc6e-de72-4073-b603-2bfbd7001586&amp;package_architecture=xpen-core2">群晖 emby链接</a></p>
+<h3 id="群晖社区套件">群晖社区套件</h3>
+<p><a href="http://packages.synocommunity.com/">群晖社区套件</a></p>
+<h3 id="transmission配置">transmission配置</h3>
+<p>原文地址:<a href="https://post.smzdm.com/p/aqndk95v/">链接</a><br>
+主要是主题美化<br>
+<code>wget https://raw.githubusercontent.com/ronggang/transmission-web-control/master/release/install-tr-control-cn.sh</code></p>
+<h3 id="calibre-webserver">calibre-webserver</h3>
+<figure data-type="image" tabindex="1"><img src="https://shelken.github.io/post-images/1592071010422.png" alt="映射"></figure>
+<h3 id="ubuntu">ubuntu</h3>
+<p>源:<br>
+<code>#阿里源 deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</code></p>
+<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[终端常用命令（转）]]></title>
         <id>https://shelken.github.io/post/zhong-duan-chang-yong-ming-ling-zhuan</id>
