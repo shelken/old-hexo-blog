@@ -1,0 +1,922 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Shelken Pan">
+  <meta name="keywords" content="">
+  <title>终端常用命令（转） - Shelken‘s Blogs</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-10-20 11:12" pubdate>
+        2019年10月20日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">终端常用命令（转）</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h4 id="1、目录操作"><a href="#1、目录操作" class="headerlink" title="1、目录操作"></a>1、目录操作</h4><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cd</td>
+<td>打开当前目录</td>
+<td>cd dirname</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>显示当前目录的路径名</td>
+<td>pwd</td>
+</tr>
+<tr>
+<td>ls</td>
+<td>显示当前目录的内容</td>
+<td>ls -la</td>
+</tr>
+<tr>
+<td>dircmp</td>
+<td>比较两个目录的内容</td>
+<td>dircmp dir1 dir2</td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td>创建一个目录</td>
+<td>mkdir dirname</td>
+</tr>
+<tr>
+<td>rmdir</td>
+<td>删除一个目录</td>
+<td>rmdir dirname</td>
+</tr>
+<tr>
+<td>mvdir</td>
+<td>移动或重命名一个目录</td>
+<td>mvdir dir1 dir2</td>
+</tr>
+</tbody></table>
+<h4 id="2、文件操作"><a href="#2、文件操作" class="headerlink" title="2、文件操作"></a>2、文件操作</h4><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cat</td>
+<td>显示或连接文件</td>
+<td>cat filename</td>
+</tr>
+<tr>
+<td>ln</td>
+<td>联接文件</td>
+<td>ln -s file1 file2</td>
+</tr>
+<tr>
+<td>find</td>
+<td>使用匹配表达式查找文件</td>
+<td>find . -name “*.c” -print</td>
+</tr>
+<tr>
+<td>file</td>
+<td>显示文件类型</td>
+<td>file filename</td>
+</tr>
+<tr>
+<td>open</td>
+<td>使用默认的程序打开文件</td>
+<td>open filename</td>
+</tr>
+<tr>
+<td>od</td>
+<td>显示非文本文件的内容</td>
+<td>od -c filename</td>
+</tr>
+<tr>
+<td>cp</td>
+<td>复制文件或目录</td>
+<td>cp file1 file2</td>
+</tr>
+<tr>
+<td>rm</td>
+<td>删除文件或目录</td>
+<td>rm filename</td>
+</tr>
+<tr>
+<td>mv</td>
+<td>改变文件名或所在目录</td>
+<td>mv file1 file2</td>
+</tr>
+<tr>
+<td>pg</td>
+<td>分页格式化显示文件内容</td>
+<td>pg filename</td>
+</tr>
+<tr>
+<td>more</td>
+<td>分屏显示文件内容</td>
+<td>more filename</td>
+</tr>
+</tbody></table>
+<h4 id="3、选择操作"><a href="#3、选择操作" class="headerlink" title="3、选择操作"></a>3、选择操作</h4><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>comm</td>
+<td>显示两有序文件的公共和非公共</td>
+<td>comm file1 file2</td>
+</tr>
+<tr>
+<td>wc</td>
+<td>统计文件的字符数、词数和行数</td>
+<td>wc filename</td>
+</tr>
+<tr>
+<td>nl</td>
+<td>给文件加上行号</td>
+<td>nl file1 &gt;file2</td>
+</tr>
+<tr>
+<td>awk</td>
+<td>在文件中查找并处理模式</td>
+<td>awk ‘{print $1 $1}’ filename</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>排序或归并文件</td>
+<td>sort -d -f -u file1</td>
+</tr>
+<tr>
+<td>uniq</td>
+<td>去掉文件中的重复行</td>
+<td>uniq file1 file2</td>
+</tr>
+<tr>
+<td>diff</td>
+<td>比较并显示两个文件的差异</td>
+<td>diff file1 file2</td>
+</tr>
+<tr>
+<td>sed</td>
+<td>非交互方式流编辑器</td>
+<td>sed “s/red/green/g” filename</td>
+</tr>
+<tr>
+<td>grep</td>
+<td>在文件中按模式查找</td>
+<td>grep “[<a href="#fn1">1]</a>“ filename</td>
+</tr>
+<tr>
+<td>cut</td>
+<td>显示文件每行中的某些域</td>
+<td>cut -f1,7 -d: /etc/passwd</td>
+</tr>
+<tr>
+<td>colrm</td>
+<td>从标准输入中删除若干colrm 8 20 file2</td>
+<td></td>
+</tr>
+<tr>
+<td>paste</td>
+<td>横向连接文件</td>
+<td>paste file1 file2</td>
+</tr>
+<tr>
+<td>head</td>
+<td>显示文件的最初几行</td>
+<td>head -20 filename</td>
+</tr>
+<tr>
+<td>tail</td>
+<td>显示文件的最后几行</td>
+<td>tail -15 filename</td>
+</tr>
+</tbody></table>
+<h4 id="4、安全操作"><a href="#4、安全操作" class="headerlink" title="4、安全操作"></a>4、安全操作</h4><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>chown</td>
+<td>改变文件或目录的属主</td>
+<td>chown newowner filename</td>
+</tr>
+<tr>
+<td>chgrp</td>
+<td>改变文件或目录的所属组</td>
+<td>chgrp staff filename</td>
+</tr>
+<tr>
+<td>xlock</td>
+<td>给终端上锁</td>
+<td>xlock -remote</td>
+</tr>
+</tbody></table>
+<pre><code class="hljs plain">修改用户密码	passwd
+复制代码</code></pre>
+
+<p>chmod|改变文件或目录的权限|chmod ug+x filename umask|定义创建文件的权限掩码|umask 027</p>
+<h4 id="5、编程操作"><a href="#5、编程操作" class="headerlink" title="5、编程操作"></a>5、编程操作</h4><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>touch</td>
+<td>更新文件的访问和修改时间</td>
+<td>touch -m 05202400 filename</td>
+</tr>
+<tr>
+<td>dbx</td>
+<td>命令行界面调试工具</td>
+<td>dbx a.out</td>
+</tr>
+<tr>
+<td>xde</td>
+<td>图形用户界面调试工具</td>
+<td>xde a.out</td>
+</tr>
+<tr>
+<td>make</td>
+<td>维护可执行程序的最新版本</td>
+<td>make</td>
+</tr>
+</tbody></table>
+<h4 id="6、进程操作"><a href="#6、进程操作" class="headerlink" title="6、进程操作"></a>6、进程操作</h4><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nice</td>
+<td>改变待执行命令的优先级</td>
+<td>nice cc -c *.c</td>
+</tr>
+<tr>
+<td>renice</td>
+<td>改变已运行进程的优先级</td>
+<td>renice +20 32768</td>
+</tr>
+<tr>
+<td>ps</td>
+<td>显示进程当前状态</td>
+<td>ps u</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>终止进程</td>
+<td>kill -9 30142</td>
+</tr>
+<tr>
+<td>nice</td>
+<td>改变待执行命令的优先级</td>
+<td>nice cc -c *.c</td>
+</tr>
+<tr>
+<td>renice</td>
+<td>改变已运行进程的优先级</td>
+<td>renice +20 32768</td>
+</tr>
+</tbody></table>
+<h4 id="7、时间操作"><a href="#7、时间操作" class="headerlink" title="7、时间操作"></a>7、时间操作</h4><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>date</td>
+<td>显示系统的当前日期和时间</td>
+<td>date</td>
+</tr>
+<tr>
+<td>cal</td>
+<td>显示日历</td>
+<td>cal 8 1996</td>
+</tr>
+<tr>
+<td>time</td>
+<td>统计程序的执行时间</td>
+<td>time a.out</td>
+</tr>
+</tbody></table>
+<h4 id="8、网络与通信操作"><a href="#8、网络与通信操作" class="headerlink" title="8、网络与通信操作"></a>8、网络与通信操作</h4><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mail</td>
+<td>阅读和发送电子邮件</td>
+<td>mail</td>
+</tr>
+<tr>
+<td>write</td>
+<td>给另一用户发送报文</td>
+<td>write username pts/1</td>
+</tr>
+<tr>
+<td>mesg</td>
+<td>允许或拒绝接收报文</td>
+<td>mesg n</td>
+</tr>
+<tr>
+<td>ftp</td>
+<td>在本地主机与远程主机之间传输文件</td>
+<td>ftp ftp.sp.net.edu.cn</td>
+</tr>
+<tr>
+<td>rcp</td>
+<td>在本地主机与远程主机 之间复制文件</td>
+<td>rcp file1 host1:file2</td>
+</tr>
+<tr>
+<td>ping</td>
+<td>给一个网络主机发送 回应请求</td>
+<td>ping hpc.sp.net.edu.cn</td>
+</tr>
+<tr>
+<td>telnet</td>
+<td>远程登录</td>
+<td>telnet hpc.sp.net.edu.cn</td>
+</tr>
+<tr>
+<td>rlogin</td>
+<td>远程登录</td>
+<td>rlogin hostname -l username</td>
+</tr>
+<tr>
+<td>rsh</td>
+<td>在远程主机执行指定命令</td>
+<td>rsh f01n03 date</td>
+</tr>
+</tbody></table>
+<h4 id="9、Korn-Shell-命令"><a href="#9、Korn-Shell-命令" class="headerlink" title="9、Korn Shell 命令"></a>9、Korn Shell 命令</h4><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>history</td>
+<td>列出最近执行过的 几条命令及编号</td>
+<td>history</td>
+</tr>
+<tr>
+<td>r</td>
+<td>重复执行最近执行过的 某条命令</td>
+<td>r -2</td>
+</tr>
+<tr>
+<td>alias</td>
+<td>给某个命令定义别名</td>
+<td>alias del=rm -i</td>
+</tr>
+<tr>
+<td>unalias</td>
+<td>取消对某个别名的定义</td>
+<td>unalias del</td>
+</tr>
+</tbody></table>
+<h4 id="10、其它命令"><a href="#10、其它命令" class="headerlink" title="10、其它命令"></a>10、其它命令</h4><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>stty</td>
+<td>显示或重置控制键定义</td>
+<td>stty -a</td>
+</tr>
+<tr>
+<td>du</td>
+<td>查询磁盘使用情况</td>
+<td>du -k subdir</td>
+</tr>
+<tr>
+<td>df</td>
+<td>显示文件系统的总空间和可用空间</td>
+<td>df /tmp</td>
+</tr>
+<tr>
+<td>w</td>
+<td>显示当前系统活动的总信息</td>
+<td>w</td>
+</tr>
+<tr>
+<td>env</td>
+<td>显示当前所有设置过的环境变量</td>
+<td>env</td>
+</tr>
+<tr>
+<td>who</td>
+<td>列出当前登录的所有用户</td>
+<td>who</td>
+</tr>
+<tr>
+<td>whoami</td>
+<td>显示当前正进行操作的用户名</td>
+<td>whoami</td>
+</tr>
+<tr>
+<td>tty</td>
+<td>显示终端或伪终端的名称</td>
+<td>tty</td>
+</tr>
+<tr>
+<td>uname</td>
+<td>显示操作系统的有关信息</td>
+<td>uname -a</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>清除屏幕或窗口内容</td>
+<td>clear</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>作者：FBY展菲链接：<a target="_blank" rel="noopener" href="https://juejin.im/post/5a3a32db6fb9a04503103d11">https://juejin.im/post/5a3a32db6fb9a04503103d11</a> 来源：掘金著作权归作者所有。</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BB%88%E7%AB%AF/">终端</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%91%BD%E4%BB%A4/">命令</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/06/13/qun-hui-xiang-guan-pei-zhi/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">群晖相关配置</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/10/16/Sublime-Text-3-%E9%83%A8%E5%88%86%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                        <span class="hidden-mobile">Sublime Text 3 部分常用快捷键</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "终端常用命令（转）&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
