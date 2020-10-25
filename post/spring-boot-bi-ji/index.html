@@ -1,22 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://shelken.github.io</id>
-    <title>ShelkenBlog</title>
-    <updated>2020-10-25T16:22:17.088Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://shelken.github.io"/>
-    <link rel="self" href="https://shelken.github.io/atom.xml"/>
-    <subtitle>项目在：&lt;a href = &quot;https://github.com/shelken/shelken.github.io&quot; target=&quot;_blank&quot;&gt;GithubPage&lt;/a&gt;</subtitle>
-    <logo>https://shelken.github.io/images/avatar.png</logo>
-    <icon>https://shelken.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, ShelkenBlog</rights>
-    <entry>
-        <title type="html"><![CDATA[Spring Boot 笔记]]></title>
-        <id>https://shelken.github.io/post/spring-boot-bi-ji/</id>
-        <link href="https://shelken.github.io/post/spring-boot-bi-ji/">
-        </link>
-        <updated>2020-10-04T16:57:38.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="一-spring-boot-入门">**一、**Spring Boot 入门</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Spring Boot 笔记 | ShelkenBlog</title>
+<meta name="description" content="项目在：&lt;a href = &#34;https://github.com/shelken/shelken.github.io&#34; target=&#34;_blank&#34;&gt;GithubPage&lt;/a&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://shelken.github.io/favicon.ico?v=1603642921277">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://shelken.github.io/styles/main.css">
+
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://shelken.github.io">ShelkenBlog</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>Spring Boot 笔记</h1>
+            <p class="article-meta">
+              2020-10-05
+              
+            </p>
+            
+            <div class="post-content">
+              <h1 id="一-spring-boot-入门">**一、**Spring Boot 入门</h1>
 <h2 id="1-spring-boot-简介">1、Spring Boot 简介</h2>
 <blockquote>
 <p>简化Spring应用开发的一个框架；</p>
@@ -3264,696 +3336,167 @@ public class HelloServiceAutoConfiguration {
 </code></pre>
 <h1 id="更多springboot整合示例">更多SpringBoot整合示例</h1>
 <p>https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[群晖相关配置]]></title>
-        <id>https://shelken.github.io/post/qun-hui-xiang-guan-pei-zhi/</id>
-        <link href="https://shelken.github.io/post/qun-hui-xiang-guan-pei-zhi/">
-        </link>
-        <updated>2020-06-13T15:26:32.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="群晖安装-emby">群晖安装 EMBY</h3>
-<p>原文地址 <a href="https://post.smzdm.com/p/ax08eov9/">安装 EMBY 教程</a><br>
-emby官方github 说明:<a href="https://github.com/MediaBrowser/Wiki/wiki/Synology-:-Custom-Package-Architectures-for-XPEnology">github</a>.</p>
-<p><a href="https://synology.emby.media/?package_repository=360efc6e-de72-4073-b603-2bfbd7001586&amp;package_architecture=xpen-core2">群晖 emby链接</a></p>
-<h3 id="群晖社区套件">群晖社区套件</h3>
-<p><a href="http://packages.synocommunity.com/">群晖社区套件</a></p>
-<h3 id="transmission配置">transmission配置</h3>
-<p>原文地址:<a href="https://post.smzdm.com/p/aqndk95v/">链接</a><br>
-主要是主题美化<br>
-<code>wget https://raw.githubusercontent.com/ronggang/transmission-web-control/master/release/install-tr-control-cn.sh</code></p>
-<h3 id="calibre-webserver">calibre-webserver</h3>
-<p><img src="https://shelken.github.io/post-images/1592071010422.png" alt="映射" loading="lazy"><br>
-批量添加书籍:calibredb add –library-path=/data/books/library/ -r /data/books/upload/</p>
-<h3 id="ubuntu">ubuntu</h3>
-<p>源:<br>
-<code>#阿里源 deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</code></p>
-<h2 id="安装-pip">安装 pip</h2>
-<p>apt install python3-pip</p>
-<h2 id="pip换源">pip换源</h2>
-<p><a href="https://yq.aliyun.com/articles/652884">更换（Pypi）pip源到国内镜像</a></p>
-<p>修改 : $HOME/.config/pip/pip.conf</p>
-<p>修改内容如下：</p>
-<p>[global]</p>
-<p>index-url = https://pypi.tuna.tsinghua.edu.cn/simple12</p>
-<h3 id="更换-mac-地址">更换 mac 地址</h3>
-<p>mkdir -p /tmp/boot<br>
-第四步：切换到dev目录</p>
-<p>cd /dev<br>
-第五步：将synoboot1 分区挂载到boot</p>
-<p>mount -t vfat synoboot1 /tmp/boot/</p>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="群晖安装-emby">群晖安装 EMBY</h3>
-<p>原文地址 <a href="https://post.smzdm.com/p/ax08eov9/">安装 EMBY 教程</a><br>
-emby官方github 说明:<a href="https://github.com/MediaBrowser/Wiki/wiki/Synology-:-Custom-Package-Architectures-for-XPEnology">github</a>.</p>
-<p><a href="https://synology.emby.media/?package_repository=360efc6e-de72-4073-b603-2bfbd7001586&amp;package_architecture=xpen-core2">群晖 emby链接</a></p>
-<h3 id="群晖社区套件">群晖社区套件</h3>
-<p><a href="http://packages.synocommunity.com/">群晖社区套件</a></p>
-<h3 id="transmission配置">transmission配置</h3>
-<p>原文地址:<a href="https://post.smzdm.com/p/aqndk95v/">链接</a><br>
-主要是主题美化<br>
-<code>wget https://raw.githubusercontent.com/ronggang/transmission-web-control/master/release/install-tr-control-cn.sh</code></p>
-<h3 id="calibre-webserver">calibre-webserver</h3>
-<p><img src="https://shelken.github.io/post-images/1592071010422.png" alt="映射" loading="lazy"><br>
-批量添加书籍:calibredb add –library-path=/data/books/library/ -r /data/books/upload/</p>
-<h3 id="ubuntu">ubuntu</h3>
-<p>源:<br>
-<code>#阿里源 deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</code></p>
-<h2 id="安装-pip">安装 pip</h2>
-<p>apt install python3-pip</p>
-<h2 id="pip换源">pip换源</h2>
-<p><a href="https://yq.aliyun.com/articles/652884">更换（Pypi）pip源到国内镜像</a></p>
-<p>修改 : $HOME/.config/pip/pip.conf</p>
-<p>修改内容如下：</p>
-<p>[global]</p>
-<p>index-url = https://pypi.tuna.tsinghua.edu.cn/simple12</p>
-<h3 id="更换-mac-地址">更换 mac 地址</h3>
-<p>mkdir -p /tmp/boot<br>
-第四步：切换到dev目录</p>
-<p>cd /dev<br>
-第五步：将synoboot1 分区挂载到boot</p>
-<p>mount -t vfat synoboot1 /tmp/boot/</p>
-<!-- more -->
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[终端常用命令（转）]]></title>
-        <id>https://shelken.github.io/post/zhong-duan-chang-yong-ming-ling-zhuan/</id>
-        <link href="https://shelken.github.io/post/zhong-duan-chang-yong-ming-ling-zhuan/">
-        </link>
-        <updated>2019-10-20T03:12:05.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="1-目录操作">1、目录操作</h4>
-<table>
-<thead>
-<tr>
-<th>命令名</th>
-<th>功能描述</th>
-<th>使用举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cd</td>
-<td>打开当前目录</td>
-<td>cd dirname</td>
-</tr>
-<tr>
-<td>pwd</td>
-<td>显示当前目录的路径名</td>
-<td>pwd</td>
-</tr>
-<tr>
-<td>ls</td>
-<td>显示当前目录的内容</td>
-<td>ls -la</td>
-</tr>
-<tr>
-<td>dircmp</td>
-<td>比较两个目录的内容</td>
-<td>dircmp dir1 dir2</td>
-</tr>
-<tr>
-<td>mkdir</td>
-<td>创建一个目录</td>
-<td>mkdir dirname</td>
-</tr>
-<tr>
-<td>rmdir</td>
-<td>删除一个目录</td>
-<td>rmdir dirname</td>
-</tr>
-<tr>
-<td>mvdir</td>
-<td>移动或重命名一个目录</td>
-<td>mvdir dir1 dir2</td>
-</tr>
-</tbody>
-</table>
-<h4 id="2-文件操作">2、文件操作</h4>
-<table>
-<thead>
-<tr>
-<th>命令名</th>
-<th>功能描述</th>
-<th>使用举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cat</td>
-<td>显示或连接文件</td>
-<td>cat filename</td>
-</tr>
-<tr>
-<td>ln</td>
-<td>联接文件</td>
-<td>ln -s file1 file2</td>
-</tr>
-<tr>
-<td>find</td>
-<td>使用匹配表达式查找文件</td>
-<td>find . -name &quot;*.c&quot; -print</td>
-</tr>
-<tr>
-<td>file</td>
-<td>显示文件类型</td>
-<td>file filename</td>
-</tr>
-<tr>
-<td>open</td>
-<td>使用默认的程序打开文件</td>
-<td>open filename</td>
-</tr>
-<tr>
-<td>od</td>
-<td>显示非文本文件的内容</td>
-<td>od -c filename</td>
-</tr>
-<tr>
-<td>cp</td>
-<td>复制文件或目录</td>
-<td>cp file1 file2</td>
-</tr>
-<tr>
-<td>rm</td>
-<td>删除文件或目录</td>
-<td>rm filename</td>
-</tr>
-<tr>
-<td>mv</td>
-<td>改变文件名或所在目录</td>
-<td>mv file1 file2</td>
-</tr>
-<tr>
-<td>pg</td>
-<td>分页格式化显示文件内容</td>
-<td>pg filename</td>
-</tr>
-<tr>
-<td>more</td>
-<td>分屏显示文件内容</td>
-<td>more filename</td>
-</tr>
-</tbody>
-</table>
-<h4 id="3-选择操作">3、选择操作</h4>
-<table>
-<thead>
-<tr>
-<th>命令名</th>
-<th>功能描述</th>
-<th>使用举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>comm</td>
-<td>显示两有序文件的公共和非公共</td>
-<td>comm file1 file2</td>
-</tr>
-<tr>
-<td>wc</td>
-<td>统计文件的字符数、词数和行数</td>
-<td>wc filename</td>
-</tr>
-<tr>
-<td>nl</td>
-<td>给文件加上行号</td>
-<td>nl file1 &gt;file2</td>
-</tr>
-<tr>
-<td>awk</td>
-<td>在文件中查找并处理模式</td>
-<td>awk '{print $1 $1}' filename</td>
-</tr>
-<tr>
-<td>sort</td>
-<td>排序或归并文件</td>
-<td>sort -d -f -u file1</td>
-</tr>
-<tr>
-<td>uniq</td>
-<td>去掉文件中的重复行</td>
-<td>uniq file1 file2</td>
-</tr>
-<tr>
-<td>diff</td>
-<td>比较并显示两个文件的差异</td>
-<td>diff file1 file2</td>
-</tr>
-<tr>
-<td>sed</td>
-<td>非交互方式流编辑器</td>
-<td>sed &quot;s/red/green/g&quot; filename</td>
-</tr>
-<tr>
-<td>grep</td>
-<td>在文件中按模式查找</td>
-<td>grep &quot;[<a href="#fn1">1]</a>&quot; filename</td>
-</tr>
-<tr>
-<td>cut</td>
-<td>显示文件每行中的某些域</td>
-<td>cut -f1,7 -d: /etc/passwd</td>
-</tr>
-<tr>
-<td>colrm</td>
-<td>从标准输入中删除若干colrm 8 20 file2</td>
-<td></td>
-</tr>
-<tr>
-<td>paste</td>
-<td>横向连接文件</td>
-<td>paste file1 file2</td>
-</tr>
-<tr>
-<td>head</td>
-<td>显示文件的最初几行</td>
-<td>head -20 filename</td>
-</tr>
-<tr>
-<td>tail</td>
-<td>显示文件的最后几行</td>
-<td>tail -15 filename</td>
-</tr>
-</tbody>
-</table>
-<h4 id="4-安全操作">4、安全操作</h4>
-<table>
-<thead>
-<tr>
-<th>命令名</th>
-<th>功能描述</th>
-<th>使用举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>chown</td>
-<td>改变文件或目录的属主</td>
-<td>chown newowner filename</td>
-</tr>
-<tr>
-<td>chgrp</td>
-<td>改变文件或目录的所属组</td>
-<td>chgrp staff filename</td>
-</tr>
-<tr>
-<td>xlock</td>
-<td>给终端上锁</td>
-<td>xlock -remote</td>
-</tr>
-</tbody>
-</table>
-<pre><code>修改用户密码	passwd
-复制代码
-</code></pre>
-<p>chmod|改变文件或目录的权限|chmod ug+x filename umask|定义创建文件的权限掩码|umask 027</p>
-<h4 id="5-编程操作">5、编程操作</h4>
-<table>
-<thead>
-<tr>
-<th>命令名</th>
-<th>功能描述</th>
-<th>使用举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>touch</td>
-<td>更新文件的访问和修改时间</td>
-<td>touch -m 05202400 filename</td>
-</tr>
-<tr>
-<td>dbx</td>
-<td>命令行界面调试工具</td>
-<td>dbx a.out</td>
-</tr>
-<tr>
-<td>xde</td>
-<td>图形用户界面调试工具</td>
-<td>xde a.out</td>
-</tr>
-<tr>
-<td>make</td>
-<td>维护可执行程序的最新版本</td>
-<td>make</td>
-</tr>
-</tbody>
-</table>
-<h4 id="6-进程操作">6、进程操作</h4>
-<table>
-<thead>
-<tr>
-<th>命令名</th>
-<th>功能描述</th>
-<th>使用举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>nice</td>
-<td>改变待执行命令的优先级</td>
-<td>nice cc -c *.c</td>
-</tr>
-<tr>
-<td>renice</td>
-<td>改变已运行进程的优先级</td>
-<td>renice +20 32768</td>
-</tr>
-<tr>
-<td>ps</td>
-<td>显示进程当前状态</td>
-<td>ps u</td>
-</tr>
-<tr>
-<td>kill</td>
-<td>终止进程</td>
-<td>kill -9 30142</td>
-</tr>
-<tr>
-<td>nice</td>
-<td>改变待执行命令的优先级</td>
-<td>nice cc -c *.c</td>
-</tr>
-<tr>
-<td>renice</td>
-<td>改变已运行进程的优先级</td>
-<td>renice +20 32768</td>
-</tr>
-</tbody>
-</table>
-<h4 id="7-时间操作">7、时间操作</h4>
-<table>
-<thead>
-<tr>
-<th>命令名</th>
-<th>功能描述</th>
-<th>使用举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>date</td>
-<td>显示系统的当前日期和时间</td>
-<td>date</td>
-</tr>
-<tr>
-<td>cal</td>
-<td>显示日历</td>
-<td>cal 8 1996</td>
-</tr>
-<tr>
-<td>time</td>
-<td>统计程序的执行时间</td>
-<td>time a.out</td>
-</tr>
-</tbody>
-</table>
-<h4 id="8-网络与通信操作">8、网络与通信操作</h4>
-<table>
-<thead>
-<tr>
-<th>命令名</th>
-<th>功能描述</th>
-<th>使用举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mail</td>
-<td>阅读和发送电子邮件</td>
-<td>mail</td>
-</tr>
-<tr>
-<td>write</td>
-<td>给另一用户发送报文</td>
-<td>write username pts/1</td>
-</tr>
-<tr>
-<td>mesg</td>
-<td>允许或拒绝接收报文</td>
-<td>mesg n</td>
-</tr>
-<tr>
-<td>ftp</td>
-<td>在本地主机与远程主机之间传输文件</td>
-<td>ftp ftp.sp.net.edu.cn</td>
-</tr>
-<tr>
-<td>rcp</td>
-<td>在本地主机与远程主机 之间复制文件</td>
-<td>rcp file1 host1:file2</td>
-</tr>
-<tr>
-<td>ping</td>
-<td>给一个网络主机发送 回应请求</td>
-<td>ping hpc.sp.net.edu.cn</td>
-</tr>
-<tr>
-<td>telnet</td>
-<td>远程登录</td>
-<td>telnet hpc.sp.net.edu.cn</td>
-</tr>
-<tr>
-<td>rlogin</td>
-<td>远程登录</td>
-<td>rlogin hostname -l username</td>
-</tr>
-<tr>
-<td>rsh</td>
-<td>在远程主机执行指定命令</td>
-<td>rsh f01n03 date</td>
-</tr>
-</tbody>
-</table>
-<h4 id="9-korn-shell-命令">9、Korn Shell 命令</h4>
-<table>
-<thead>
-<tr>
-<th>命令名</th>
-<th>功能描述</th>
-<th>使用举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>history</td>
-<td>列出最近执行过的 几条命令及编号</td>
-<td>history</td>
-</tr>
-<tr>
-<td>r</td>
-<td>重复执行最近执行过的 某条命令</td>
-<td>r -2</td>
-</tr>
-<tr>
-<td>alias</td>
-<td>给某个命令定义别名</td>
-<td>alias del=rm -i</td>
-</tr>
-<tr>
-<td>unalias</td>
-<td>取消对某个别名的定义</td>
-<td>unalias del</td>
-</tr>
-</tbody>
-</table>
-<h4 id="10-其它命令">10、其它命令</h4>
-<table>
-<thead>
-<tr>
-<th>命令名</th>
-<th>功能描述</th>
-<th>使用举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>stty</td>
-<td>显示或重置控制键定义</td>
-<td>stty -a</td>
-</tr>
-<tr>
-<td>du</td>
-<td>查询磁盘使用情况</td>
-<td>du -k subdir</td>
-</tr>
-<tr>
-<td>df</td>
-<td>显示文件系统的总空间和可用空间</td>
-<td>df /tmp</td>
-</tr>
-<tr>
-<td>w</td>
-<td>显示当前系统活动的总信息</td>
-<td>w</td>
-</tr>
-<tr>
-<td>env</td>
-<td>显示当前所有设置过的环境变量</td>
-<td>env</td>
-</tr>
-<tr>
-<td>who</td>
-<td>列出当前登录的所有用户</td>
-<td>who</td>
-</tr>
-<tr>
-<td>whoami</td>
-<td>显示当前正进行操作的用户名</td>
-<td>whoami</td>
-</tr>
-<tr>
-<td>tty</td>
-<td>显示终端或伪终端的名称</td>
-<td>tty</td>
-</tr>
-<tr>
-<td>uname</td>
-<td>显示操作系统的有关信息</td>
-<td>uname -a</td>
-</tr>
-<tr>
-<td>clear</td>
-<td>清除屏幕或窗口内容</td>
-<td>clear</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>作者：FBY展菲链接：https://juejin.im/post/5a3a32db6fb9a04503103d11 来源：掘金著作权归作者所有。</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Sublime Text 3 部分常用快捷键]]></title>
-        <id>https://shelken.github.io/post/sublime-text-3-bu-fen-chang-yong-kuai-jie-jian/</id>
-        <link href="https://shelken.github.io/post/sublime-text-3-bu-fen-chang-yong-kuai-jie-jian/">
-        </link>
-        <updated>2019-10-16T13:45:39.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1操作">1.操作</h2>
-<p>Ctrl + `： 打开Sublime Text控制台（Esc退出）<br>
-Ctrl+Shift+P：打开命令面板（Esc退出）<br>
-Ctrl + K, Ctrl + B： 组合键，显示或隐藏侧栏<br>
-Alt ：光标调到菜单栏，↑↓←→ 移动光标</p>
-<h2 id="2编辑">2.编辑</h2>
-<p>Ctr+Shift+D：复制粘贴光标所在行<br>
-Alt+.：关闭标签<br>
-Ctrl+/：用//注释当前行。<br>
-Ctrl+Shift+/：用/**/注释。<br>
-Ctrl + Enter： 在当前行下面新增一行然后跳至该行<br>
-Ctrl + Shift + Enter： 在当前行上面增加一行并跳至该行<br>
-Ctrl + ←/→： 进行逐词移动，<br>
-Ctrl + Shift + ←/→： 进行逐词选择<br>
-Ctrl + Shift + ↑/↓： 移动当前行（文件会被修改）<br>
-Ctrl+KK ：从光标处删除至行尾<br>
-Ctrl+K Backspace ：从光标处删除至行首<br>
-Ctrl+Z：撤销<br>
-Ctrl+Y：恢复撤销<br>
-Ctrl+J：合并行（已选择需要合并的多行时）<br>
-Ctrl + [： 选中内容向左缩进<br>
-Ctrl + ]： 选中内容向右缩进</p>
-<h2 id="3选择">3.选择</h2>
-<p>Alt+F3：选中关键词后，选中所有相同的词。可以配合Ctrl+D使用。<br>
-Ctrl + D Ctrl + K Ctrl + U：Ctrl + D选择当前光标所在的词并高亮该词所有出现的位置，再次Ctrl + D，会选择该词出现的下一个位置。在多重选词的过程中，Ctrl + K会将当前选中的词进行跳过在多重选词的过程中，Ctrl + U进行回退<br>
-Ctrl+L ：选择光标所在整行<br>
-Ctrl+X：删除光标所在行<br>
-Ctrl + J： 把当前选中区域合并为一行<br>
-Ctrl+Shift+M：选中当前括号内容，重复可选着括号本身</p>
-<h2 id="4查找">4.查找</h2>
-<p>（如果有窗口弹出都是Esc退出弹出窗口）<br>
-Ctr+p：输入@显示容器（css或者js里面）<br>
-Ctrl + F： 调出搜索框<br>
-Ctrl + H： 调出替换框进行替换<br>
-Ctrl + Shift + H： 输入替换内容后，替换当前关键字<br>
-Ctrl + Alt + Enter： 输入替换内容后，替换所有匹配关键字。(NOTE: 注意此时如果鼠标焦点在编辑窗口中，则替换失败，将鼠标焦点调到替换框中，Ctrl + Alt + Enter才会起作用)<br>
-Ctrl + Shift + F： 开启多文件搜索&amp;替换<br>
-Alt + C： 切换大小写敏感（Case-sensitive）模式<br>
-Alt + W： 切换整字匹配（Whole matching）模式<br>
-Alt + R： 切换正则匹配模式的开启/关闭</p>
-<h2 id="5跳转">5.跳转</h2>
-<p>Ctrl + P：列出当前打开的文件（或者是当前文件夹的文件），输入文件名然后 Enter 跳转至该文件，输入@symbol跳转到symbol符号所在的位置，输入#keyword跳转到keyword所在的位置，输入:n跳转到文件的第n行<br>
-Ctrl + R：列出当前文件中的符号（例如类名和函数名，但无法深入到变量名），输入符号名称 Enter 即可以跳转到该处。<br>
-会列出Markdown文件的大纲<br>
-F12： 快速跳转到当前光标所在符号的定义处（Jump to Definition）。比如当前光标所在为一个函数调用，F12会跳转至该函数的定义处。<br>
-Ctrl + G： 输入行号以跳转到指定行<br>
-Ctrl+M：跳转到括号另一半。</p>
-<h2 id="6窗口和tab页">6.窗口和Tab页</h2>
-<p>Ctrl + N： 在当前窗口创建一个新标签<br>
-Ctrl + Shift + N： 创建一个新窗口（该快捷键 和搜狗输入法快捷键冲突）<br>
-Ctrl + W： 关闭标签页，如果没有标签页了，则关闭该窗口<br>
-Ctrl+Shift+W：关闭所有打开文件<br>
-Ctrl + Shift + T： 恢复刚刚关闭的标签。<br>
-Ctrl +Tag：移动标签。</p>
-<h2 id="7屏幕">7.屏幕</h2>
-<p>F11： 切换普通全屏<br>
-Shift + F11： 切换无干扰全屏<br>
-Alt + Shift + 2： 进行左右分屏<br>
-Alt + Shift + 8进行上下分屏<br>
-Alt + Shift + 5进行上下左右分屏（即分为四屏）<br>
-Ctrl + 数字键： 跳转到指定屏<br>
-Ctrl + Shift + 数字键： 将当前屏移动到指定屏</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[JavaScript 学习笔记]]></title>
-        <id>https://shelken.github.io/post/javascript-xue-xi-bi-ji/</id>
-        <link href="https://shelken.github.io/post/javascript-xue-xi-bi-ji/">
-        </link>
-        <updated>2019-10-16T13:44:42.000Z</updated>
-        <content type="html"><![CDATA[<p>##关于作用域</p>
-<ul>
-<li>let:定义一个块级作用域，表示作用域只有一个块，</li>
-<li>const:定义一个常量，值不可更改。作用域同样</li>
-<li>var: 局部作用域与全局。</li>
-</ul>
-<pre><code class="language-javascript">'use strict';
 
-function foo() {
-    for (var i=0; i&lt;100; i++) {
-        //
-    }
-    i += 100; // 仍然可以引用变量i
-}
-'use strict';
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://shelken.github.io/post/qun-hui-xiang-guan-pei-zhi/">
+                <h3 class="post-title">
+                  群晖相关配置
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
 
-function foo() {
-    var sum = 0;
-    for (let i=0; i&lt;100; i++) {
-        sum += i;
-    }
-    // SyntaxError:
-    i += 1;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[IDEA快捷键学习与界面熟悉笔记]]></title>
-        <id>https://shelken.github.io/post/idea-kuai-jie-jian-xue-xi-yu-jie-mian-shou-xi-bi-ji/</id>
-        <link href="https://shelken.github.io/post/idea-kuai-jie-jian-xue-xi-yu-jie-mian-shou-xi-bi-ji/">
-        </link>
-        <updated>2019-10-14T10:52:29.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>来自一个地址：忘记从哪里来的了</p>
-</blockquote>
-<figure data-type="image" tabindex="1"><img src="https://shelken.github.io/post-images/1571050219834.png" alt="" loading="lazy"></figure>
-<p>###一篇文章地址<br>
-<a href="https://zhuanlan.zhihu.com/p/36305203">这里</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[哈哈哈哈哈O(∩_∩)O哈！😁]]></title>
-        <id>https://shelken.github.io/post/hello-gridea/</id>
-        <link href="https://shelken.github.io/post/hello-gridea/">
-        </link>
-        <updated>2019-10-13T09:46:42.000Z</updated>
-        <summary type="html"><![CDATA[<p>第一个page😊😃😄😇🙂😚😎😎🤓😟😟😟😟😟😕😕😠😤</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>第一个page😊😃😄😇🙂😚😎😎🤓😟😟😟😟😟😕😕😠😤</p>
-<!-- more -->
-<figure data-type="image" tabindex="1"><img src="https://shelken.github.io/post-images/1570960051691.jpg" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
-</feed>
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://shelken.github.io/images/avatar.png?v=1603642921277" class="no-responsive avatar">
+    <div class="text-muted">项目在：<a href = "https://github.com/shelken/shelken.github.io" target="_blank">GithubPage</a></div>
+    <div class="social-container">
+      
+        
+          <a href="https://github.com/shelken/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://shelken.github.io/post/spring-boot-bi-ji/">Spring Boot 笔记</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://shelken.github.io/post/qun-hui-xiang-guan-pei-zhi/">群晖相关配置</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://shelken.github.io/post/zhong-duan-chang-yong-ming-ling-zhuan/">终端常用命令（转）</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://shelken.github.io/post/sublime-text-3-bu-fen-chang-yong-kuai-jie-jian/">Sublime Text 3 部分常用快捷键</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://shelken.github.io/post/javascript-xue-xi-bi-ji/">JavaScript 学习笔记</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://shelken.github.io/post/idea-kuai-jie-jian-xue-xi-yu-jie-mian-shou-xi-bi-ji/">IDEA快捷键学习与界面熟悉笔记</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://shelken.github.io/post/hello-gridea/">哈哈哈哈哈O(∩_∩)O哈！😁</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://shelken.github.io/post/about/">关于</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://shelken.github.io/tag/0R5GB5Yqi/" class="badge secondary">
+          终端
+        </a>
+      
+        <a href="https://shelken.github.io/tag/XD1T7FrrwB/" class="badge ">
+          命令
+        </a>
+      
+        <a href="https://shelken.github.io/tag/ZK-si4JDJS/" class="badge secondary">
+          笔记
+        </a>
+      
+        <a href="https://shelken.github.io/tag/MLczAotJT/" class="badge warning">
+          Sublime
+        </a>
+      
+        <a href="https://shelken.github.io/tag/VJXVswabaJ/" class="badge warning">
+          快捷键
+        </a>
+      
+        <a href="https://shelken.github.io/tag/51Y3LEn6_/" class="badge secondary">
+          JavaScript
+        </a>
+      
+        <a href="https://shelken.github.io/tag/Yprhlq9ou/" class="badge secondary">
+          IDEA
+        </a>
+      
+        <a href="https://shelken.github.io/tag/2CBp18WDD/" class="badge success">
+          第一
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://shelken.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>
