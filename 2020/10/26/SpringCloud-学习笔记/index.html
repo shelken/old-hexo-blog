@@ -289,16 +289,16 @@ lease-expiration-duration-in-seconds: 2 #掉线清除时间</code></pre>
 
 <p>手写一个 ribbon 的负载均衡算法。</p>
 <h1 id="OpenFeign"><a href="#OpenFeign" class="headerlink" title="OpenFeign"></a>OpenFeign</h1><p>开启 feign</p>
-<p><img src="../../../Library/Application%20Support/typora-user-images/image-20201021170058363.png" srcset="/img/loading.gif" alt="image-20201021170058363"></p>
+<p><img src="https://i.loli.net/2020/10/26/m7DLKpd2vTk9wZG.png" srcset="/img/loading.gif" alt="image-20201021170058363"></p>
 <p>然后将提供者的 api 与我们的接口对应。feign 帮我们完成类似于 resttemplat 的工作，并且实现负载均衡</p>
-<p><img src="../../../Library/Application%20Support/typora-user-images/image-20201021170421029.png" srcset="/img/loading.gif" alt="image-20201021170421029"></p>
+<p><img src="https://i.loli.net/2020/10/26/fXYzT9JHPt7yUV4.png" srcset="/img/loading.gif" alt="image-20201021170421029"></p>
 <p>这里是控制类，实现用户接口调用。</p>
 <p><img src="https://i.loli.net/2020/10/21/bzI2G1YB79gnUZM.png" srcset="/img/loading.gif" alt="image-20201021170624755"></p>
 <p>feign详细日志：</p>
 <p><img src="https://i.loli.net/2020/10/21/sbAQcuJ8tU1YmEx.png" srcset="/img/loading.gif" alt="image-20201021172104947"></p>
-<p><img src="../../../Library/Application%20Support/typora-user-images/image-20201021172118163.png" srcset="/img/loading.gif" alt="image-20201021172118163"></p>
+<p><img src="https://i.loli.net/2020/10/26/aq4UET3Bf5i2tAw.png" srcset="/img/loading.gif" alt="image-20201021172118163"></p>
 <h1 id="Hystrix-断路器-降级-实时监视"><a href="#Hystrix-断路器-降级-实时监视" class="headerlink" title="Hystrix 断路器 降级 实时监视"></a>Hystrix 断路器 降级 实时监视</h1><p>如果一个服务超时了或者出错等原因导致消费端出现等待情况，应该服务降级，应返回用户一个备选方案，而不是持续连接占用资源和浪费消费端时间。返回一些更友好的提示。</p>
-<p><img src="../../../Library/Application%20Support/typora-user-images/image-20201022004743699.png" srcset="/img/loading.gif" alt="image-20201022004743699"></p>
+<p><img src="https://i.loli.net/2020/10/26/JjKA85H9LV2PzT1.png" srcset="/img/loading.gif" alt="image-20201022004743699"></p>
 <p><img src="https://i.loli.net/2020/10/22/w8xfdjyZBpgKnoA.png" srcset="/img/loading.gif" alt="image-20201022004642186"></p>
 <p>在服务端开启服务降级，在客户端开启服务降级。</p>
 <p><img src="https://i.loli.net/2020/10/22/G8kWiz2V4HOtQMn.png" srcset="/img/loading.gif" alt="image-20201022193017683"></p>
@@ -306,7 +306,7 @@ lease-expiration-duration-in-seconds: 2 #掉线清除时间</code></pre>
 <p>也可以实现一个服务的接口，然后用 openfeign 的 fallback 来实现，多个方法对应多个不同降级。</p>
 <p><img src="https://i.loli.net/2020/10/22/ribLAB85x6OyCRt.png" srcset="/img/loading.gif" alt="image-20201022193445110"></p>
 <p>服务熔断：</p>
-<p><img src="../../../Library/Application%20Support/typora-user-images/image-20201022193800408.png" srcset="/img/loading.gif" alt="image-20201022193800408"></p>
+<p><img src="https://i.loli.net/2020/10/26/vb3kDOexNs5BXyG.png" srcset="/img/loading.gif" alt="image-20201022193800408"></p>
 <p><img src="https://i.loli.net/2020/10/22/NbokR7xK25ZIcmE.png" srcset="/img/loading.gif" alt="image-20201022224757930"></p>
 <p>可以再配置里指定某个服务某个方法 hystrix 的配置。</p>
 <p>服务限流：阿里巴巴那边讲</p>
