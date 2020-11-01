@@ -221,7 +221,7 @@
             
             <div class="markdown-body" id="post-body">
               <p>##常用</p>
-<pre><code class="hljs bash"><span class="hljs-comment">#首先用这条命令生成文件</span>
+<div class="hljs"><pre><code class="hljs bash"><span class="hljs-comment">#首先用这条命令生成文件</span>
 <span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> ./*.mp4; <span class="hljs-keyword">do</span> <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;file &#x27;<span class="hljs-variable">$f</span>&#x27;&quot;</span> &gt;&gt; mylist.txt; <span class="hljs-keyword">done</span>;
 
 ffmpeg -f concat -i mylist.txt -c copy myvideo.mp4
@@ -233,7 +233,7 @@ ffmpeg -f concat -i mylist.txt -c copy myvideo.mp4
 
 <span class="hljs-comment">#如果出现unsafe 的提示要加上 -safe 0</span>
 ffmpeg -f concat -safe 0 -i mylist.txt -c copy myvideo.mp4
-<span class="hljs-comment">#这个好像文件中使用相对地址就不会。</span></code></pre>
+<span class="hljs-comment">#这个好像文件中使用相对地址就不会。</span></code></pre></div>
 
 <p><a target="_blank" rel="noopener" href="https://trac.ffmpeg.org/wiki/Concatenate">这里附上一个权威的链接</a></p>
 

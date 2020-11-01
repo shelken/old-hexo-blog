@@ -220,26 +220,26 @@
             <h1 style="display: none">docker 相关问题解决记录</h1>
             
             <div class="markdown-body" id="post-body">
-              <h2 id="虚拟机中CentOS桥接网路无法连接问题解决"><a href="#虚拟机中CentOS桥接网路无法连接问题解决" class="headerlink" title="虚拟机中CentOS桥接网路无法连接问题解决"></a>虚拟机中CentOS桥接网路无法连接问题解决</h2><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">xxx为网卡名称</span>
-vim /etc/sysconfig/network-scripts/ifcfg-xxx</code></pre>
+              <h2 id="虚拟机中CentOS桥接网路无法连接问题解决"><a href="#虚拟机中CentOS桥接网路无法连接问题解决" class="headerlink" title="虚拟机中CentOS桥接网路无法连接问题解决"></a>虚拟机中CentOS桥接网路无法连接问题解决</h2><div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">xxx为网卡名称</span>
+vim /etc/sysconfig/network-scripts/ifcfg-xxx</code></pre></div>
 
 <p>将文件中 onboot=no 修改为 yes，重启后，可以重新获取网址。</p>
 <p><strong>一些命令</strong></p>
-<pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">重启网络</span>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">重启网络</span>
 systemctl restart network
 <span class="hljs-meta">#</span><span class="bash">查看 ip 地址命令</span>
-ip a</code></pre>
+ip a</code></pre></div>
 
 
 
 
 
 <h2 id="docker服务启动-重启-关闭命令"><a href="#docker服务启动-重启-关闭命令" class="headerlink" title="docker服务启动,重启,关闭命令"></a>docker服务启动,重启,关闭命令</h2><p><img src="https://i.loli.net/2020/10/05/Jwd6zIBZDlFKcgS.png" srcset="/img/loading.gif" alt="image-20201005014420062"></p>
-<h2 id="我的docker-阿里云镜像地址配置"><a href="#我的docker-阿里云镜像地址配置" class="headerlink" title="我的docker 阿里云镜像地址配置"></a>我的docker 阿里云镜像地址配置</h2><pre><code class="hljs json">&#123;
+<h2 id="我的docker-阿里云镜像地址配置"><a href="#我的docker-阿里云镜像地址配置" class="headerlink" title="我的docker 阿里云镜像地址配置"></a>我的docker 阿里云镜像地址配置</h2><div class="hljs"><pre><code class="hljs json">&#123;
   <span class="hljs-attr">&quot;experimental&quot;</span>:<span class="hljs-literal">false</span>,
   <span class="hljs-attr">&quot;debug&quot;</span>:<span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;registry-mirrors&quot;</span>:[<span class="hljs-string">&quot;https://d4zjrewv.mirror.aliyuncs.com&quot;</span>,<span class="hljs-string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span>]
-&#125;</code></pre>
+&#125;</code></pre></div>
 
 
 
