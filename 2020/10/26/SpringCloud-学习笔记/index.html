@@ -367,47 +367,43 @@
 </ol>
 <ol start="4">
 <li><p>修改 cluster.conf 文件</p>
-<div class="hljs"><pre><code class="hljs pro">192.168.6.2:8848
-192.168.6.2:8849
-192.168.6.2:8850
-</code></pre></div>
+<div class="hljs"><pre><code class="hljs properties"><span class="hljs-meta">192.168.6.2</span>:<span class="hljs-string">8848</span>
+<span class="hljs-meta">192.168.6.2</span>:<span class="hljs-string">8849</span>
+<span class="hljs-meta">192.168.6.2</span>:<span class="hljs-string">8850</span></code></pre></div>
 
+</li>
+</ol>
 <p>加入将要启动的nacos集群的 url。</p>
 <p>直接启动连接到 mysql，成功连接（启动前记得初始化mysql 里的数据库）</p>
 <p>之后配置就可以持久化到我们 mysql 数据库。</p>
+<h3 id="配置-nginx"><a href="#配置-nginx" class="headerlink" title="配置 nginx"></a>配置 nginx</h3><ol>
+<li><div class="hljs"><pre><code class="hljs properties"><span class="hljs-attr">upstream</span> <span class="hljs-string">cluster&#123;</span>
+<span class="hljs-comment">        # server 192.168.6.2:8848;</span>
+<span class="hljs-comment">        # server 192.168.6.2:8848;</span>
+<span class="hljs-comment">        # server 192.168.6.2:8848;</span>
+        <span class="hljs-attr">server</span> <span class="hljs-string">172.20.10.3:8848;</span>
+        <span class="hljs-attr">server</span> <span class="hljs-string">172.20.10.3:8849;</span>
+        <span class="hljs-attr">server</span> <span class="hljs-string">172.20.10.3:8850;</span>
+    <span class="hljs-attr">&#125;</span>
+
+    <span class="hljs-attr">server</span> <span class="hljs-string">&#123;</span>
+        <span class="hljs-attr">listen</span>       <span class="hljs-string">1111;</span>
+        <span class="hljs-attr">server_name</span>  <span class="hljs-string">localhost;</span>
+
+<span class="hljs-comment">        #charset koi8-r;</span>
+
+<span class="hljs-comment">        #access_log  logs/host.access.log  main;</span>
+
+        <span class="hljs-attr">location</span> <span class="hljs-string">/ &#123;</span>
+<span class="hljs-comment">            # root   html;</span>
+<span class="hljs-comment">            # index  index.html index.htm;</span>
+            <span class="hljs-attr">proxy_pass</span> <span class="hljs-string">http://cluster;</span>
+        <span class="hljs-attr">&#125;&#125;</span></code></pre></div>
+</li>
+<li><p>启动 nginx，完成转发，负载均衡。</p>
 </li>
 </ol>
-<p>###配置 nginx</p>
-<ol>
-<li><div class="hljs"><pre><code>upstream cluster&#123;
-        # server 192.168.6.2:8848;
-        # server 192.168.6.2:8848;
-        # server 192.168.6.2:8848;
-        server 172.20.10.3:8848;
-        server 172.20.10.3:8849;
-        server 172.20.10.3:8850;
-    &#125;
-
-    server &#123;
-        listen       1111;
-        server_name  localhost;
-
-        #charset koi8-r;
-
-        #access_log  logs/host.access.log  main;
-
-        location / &#123;
-            # root   html;
-            # index  index.html index.htm;
-            proxy_pass http://cluster;
-        &#125;&#125;
-<pre><code class="hljs yaml">
-<span class="hljs-number">2</span><span class="hljs-string">.</span> <span class="hljs-string">启动</span> <span class="hljs-string">nginx，完成转发，负载均衡。</span>
-
-<span class="hljs-comment">### 修改 provider 服务的配置</span>
-
-<span class="hljs-string">```yaml</span>
-<span class="hljs-attr">server:</span>
+<h3 id="修改-provider-服务的配置"><a href="#修改-provider-服务的配置" class="headerlink" title="修改 provider 服务的配置"></a>修改 provider 服务的配置</h3><div class="hljs"><pre><code class="hljs yaml"><span class="hljs-attr">server:</span>
   <span class="hljs-attr">port:</span> <span class="hljs-number">9001</span>
 
 <span class="hljs-attr">spring:</span>
@@ -422,9 +418,7 @@
       <span class="hljs-attr">config:</span>
         <span class="hljs-attr">server-addr:</span> <span class="hljs-string">localhost:1111</span>
         <span class="hljs-attr">file-extension:</span> <span class="hljs-string">yaml</span></code></pre></div>
-</code></pre>
-</li>
-</ol>
+
 <p><strong>修改 server-addr 将其指向 nginx 地址</strong></p>
 <h1 id="Sentinel-熔断与限流"><a href="#Sentinel-熔断与限流" class="headerlink" title="Sentinel 熔断与限流"></a>Sentinel 熔断与限流</h1><h2 id="控制台"><a href="#控制台" class="headerlink" title="控制台"></a>控制台</h2><ol>
 <li>下载 github 官方 sentinel dashboard。<a target="_blank" rel="noopener" href="https://github.com/alibaba/Sentinel/releases">链接</a></li>
@@ -454,10 +448,10 @@
    上面👆配置了 `nacos` 和 `sentinel` 连接的地址
 
 ```xml
-				<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba.cloud<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-sentinel<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></code></pre></div>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba.cloud<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-sentinel<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></code></pre></div>
 </code></pre>
 </li>
 </ol>
