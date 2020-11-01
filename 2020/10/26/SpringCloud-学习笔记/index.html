@@ -430,36 +430,37 @@
 <li>登录控制台</li>
 </ol>
 <h2 id="项目连接配置"><a href="#项目连接配置" class="headerlink" title="项目连接配置"></a>项目连接配置</h2><ol>
-<li><div class="hljs"><pre><code class="yaml">spring:
-  application:
-    name: sentinel-service
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:1111
-#      config:
-#        server-addr: localhost:1111
-    sentinel:
-      transport:
-        dashboard: localhost:2222
-        port: 8719
-#指定的端口号spring.cloud.sentinel.transport.port将在应用程序的相应服务器上启动HTTP Server，并且该服务器将与Sentinel仪表板进行交互。例如，如果在Sentinel仪表板中添加了速率限制规则，则规则数据将被推送到HTTP Server并由HTTP Server接收，然后HTTP Server将规则注册到Sentinel。        
-<pre><code class="hljs xml">
-   上面👆配置了 `nacos` 和 `sentinel` 连接的地址
+<li><p>配置了 <code>nacos</code> 和 <code>sentinel</code> 连接的地址</p>
+<div class="hljs"><pre><code class="hljs yaml"><span class="hljs-attr">spring:</span>
+  <span class="hljs-attr">application:</span>
+    <span class="hljs-attr">name:</span> <span class="hljs-string">sentinel-service</span>
+  <span class="hljs-attr">cloud:</span>
+    <span class="hljs-attr">nacos:</span>
+      <span class="hljs-attr">discovery:</span>
+        <span class="hljs-attr">server-addr:</span> <span class="hljs-string">localhost:1111</span>
+<span class="hljs-comment">#      config:</span>
+<span class="hljs-comment">#        server-addr: localhost:1111</span>
+    <span class="hljs-attr">sentinel:</span>
+      <span class="hljs-attr">transport:</span>
+        <span class="hljs-attr">dashboard:</span> <span class="hljs-string">localhost:2222</span>
+        <span class="hljs-attr">port:</span> <span class="hljs-number">8719</span>
+<span class="hljs-comment">#指定的端口号spring.cloud.sentinel.transport.port将在应用程序的相应服务器上启动HTTP Server，并且该服务器将与Sentinel仪表板进行交互。例如，如果在Sentinel仪表板中添加了速率限制规则，则规则数据将被推送到HTTP Server并由HTTP Server接收，然后HTTP Server将规则注册到Sentinel。        </span></code></pre></div>
 
-```xml
-<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>配置了 pom</p>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba.cloud<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-sentinel<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></code></pre></div>
-</code></pre>
+</li>
+<li><p>在图中看到我们的实时监控和链路图</p>
 </li>
 </ol>
-<p>👆配置了 pom</p>
-<ol start="2">
-<li>在图中看到我们的实时监控和链路图</li>
-</ol>
-<p>   <img src="https://i.loli.net/2020/10/29/ZT4RbBDQuFgwoPJ.png" srcset="/img/loading.gif" alt="image-20201029211853347"></p>
+<p><img src="https://i.loli.net/2020/10/29/ZT4RbBDQuFgwoPJ.png" srcset="/img/loading.gif" alt="image-20201029211853347"></p>
 <h2 id="流控规则"><a href="#流控规则" class="headerlink" title="流控规则"></a>流控规则</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lzb348110175/article/details/107532937">流控规则详细</a></p>
 <h2 id="熔断规则"><a href="#熔断规则" class="headerlink" title="熔断规则"></a>熔断规则</h2><p>注意：sentinel 无半开状态。(最新 1.8说有了 <a target="_blank" rel="noopener" href="https://github.com/alibaba/Sentinel/wiki/%E7%86%94%E6%96%AD%E9%99%8D%E7%BA%A7#%E9%99%8D%E7%BA%A7%E7%AD%96%E7%95%A5">查看</a>)</p>
 <p><img src="https://i.loli.net/2020/10/30/AQpIoKjrwMzlDBe.png" srcset="/img/loading.gif" alt="image-20201030140905203"></p>
