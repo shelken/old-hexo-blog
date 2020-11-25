@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="Shelken Pan">
   <meta name="keywords" content="">
-  <title>关于 - Shelken‘s Blogs</title>
+  <title>mall项目学习笔记 - Shelken‘s Blogs</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -56,7 +56,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -160,6 +160,43 @@
             </span>
 
             
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-11-15 02:40" pubdate>
+        2020年11月15日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      146 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      1
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
           </div>
 
           
@@ -170,62 +207,104 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-            <div class="about-avatar">
-              <img src="/img/avatar/%E5%9C%88%E6%97%8B%E8%BD%AC.webp" srcset="/img/loading.gif"
-                   class="img-fluid" alt="avatar">
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">mall项目学习笔记</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h2 id="整合-Swagger2"><a href="#整合-Swagger2" class="headerlink" title="整合 Swagger2"></a>整合 Swagger2</h2><ul>
+<li><p>写入Config 时忘记加入 Configration 注解与@EnableSwagger2。</p>
+</li>
+<li><p>MyBatis 重新运行时，sql 语句文件没有覆盖而是叠加。需要使用 版本1.3.7 以上，然后加上插件。</p>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--生成mapper.xml时覆盖原文件--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plugin</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin&quot;</span> /&gt;</span></code></pre></div>
+</li>
+<li><p>targetProject的值不同系统不一样，windows 反斜杠’ \ ‘。mac为‘ / ’。</p>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">sqlMapGenerator</span> <span class="hljs-attr">targetPackage</span>=<span class="hljs-string">&quot;com.shelken.mall.mbg.mapper&quot;</span> <span class="hljs-attr">targetProject</span>=<span class="hljs-string">&quot;src/main/resources&quot;</span>/&gt;</span></code></pre></div>
+
+</li>
+</ul>
+<h2 id="整合redis"><a href="#整合redis" class="headerlink" title="整合redis"></a>整合redis</h2><ul>
+<li>Controller 忘记写 @ResponseBody 注解，导致访问一直出现 404 错误。返回对象必须加上@ResponseBody注解。</li>
+</ul>
+<h2 id="整合-Spring-Security-与-JWT"><a href="#整合-Spring-Security-与-JWT" class="headerlink" title="整合 Spring Security 与 JWT"></a>整合 Spring Security 与 JWT</h2>
             </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
                 
-
-<div class="text-center">
-  <div class="about-info">
-    <div class="about-name">Shelken</div>
-    <div class="about-intro"> 苦逼毕业生 </div>
-    <div class="about-icons">
-      
-        
-        
-        
-        <a target="_blank" rel="noopener" href="https://github.com/shelken" class="
-           hint--bottom hint--rounded"
-           aria-label=GitHub
-        >
-          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
-          
-        </a>
-      
-        
-        
-        
-        <a href="javascript:;" class="qr-trigger
-           "
-           
-        >
-          <i class="iconfont icon-wechat-fill" aria-hidden="true"></i>
-          
-            <img class="qr-img" src="/img/wechat-qrcode.JPG" srcset="/img/loading.gif" alt="qrcode" />
-          
-        </a>
-      
-    </div>
-  </div>
-</div>
-<div class="mt-5 markdown-body">
-  <h2 id="这里写关于页的正文，支持-Markdown-HTML"><a href="#这里写关于页的正文，支持-Markdown-HTML" class="headerlink" title="这里写关于页的正文，支持 Markdown, HTML-"></a>这里写关于页的正文，支持 Markdown, HTML-</h2><h3 id="dd"><a href="#dd" class="headerlink" title="dd"></a>dd</h3><h2 id="hdh"><a href="#hdh" class="headerlink" title="hdh"></a>hdh</h2>
-</div>
-
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/mall/">mall</a>
+                    
+                      <a class="hover-with-bg" href="/tags/SpringBoot/">SpringBoot</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Spring-Security/">Spring Security</a>
+                    
+                  </div>
+                
               </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/11/18/redis-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">redis 学习笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">数据结构和算法学习笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
-          </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
   </main>
 
@@ -300,6 +379,31 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
 
 
   <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
@@ -307,7 +411,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "关于&nbsp;",
+        "mall项目学习笔记&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -350,6 +454,20 @@
   </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
 
 
 

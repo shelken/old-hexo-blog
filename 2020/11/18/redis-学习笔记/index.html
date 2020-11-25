@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="Shelken Pan">
   <meta name="keywords" content="">
-  <title>关于 - Shelken‘s Blogs</title>
+  <title>redis 学习笔记 - Shelken‘s Blogs</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -56,7 +56,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -160,6 +160,43 @@
             </span>
 
             
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-11-18 11:30" pubdate>
+        2020年11月18日 中午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      250 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      2
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
           </div>
 
           
@@ -170,62 +207,100 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-            <div class="about-avatar">
-              <img src="/img/avatar/%E5%9C%88%E6%97%8B%E8%BD%AC.webp" srcset="/img/loading.gif"
-                   class="img-fluid" alt="avatar">
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">redis 学习笔记</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h2 id="五大基本存储类型"><a href="#五大基本存储类型" class="headerlink" title="五大基本存储类型"></a>五大基本存储类型</h2><h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p>mutil exec discard </p>
+<h2 id="三种特殊类型"><a href="#三种特殊类型" class="headerlink" title="三种特殊类型"></a>三种特殊类型</h2><p>geo hyperloglog bitmap</p>
+<h2 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h2><p>rdb 数据快照，与 appendonly.aof</p>
+<h2 id="发布订阅"><a href="#发布订阅" class="headerlink" title="发布订阅"></a>发布订阅</h2><h2 id="主从复制"><a href="#主从复制" class="headerlink" title="主从复制"></a>主从复制</h2><div class="hljs"><pre><code class="hljs bash"><span class="hljs-comment">#配置主从复制</span>
+slaveof host port
+<span class="hljs-comment">#想要持久配置，需在 redis.conf 修改</span>
+
+<span class="hljs-comment">#将自己配为主</span>
+slaveof no one</code></pre></div>
+
+<h2 id="哨兵模式"><a href="#哨兵模式" class="headerlink" title="哨兵模式"></a>哨兵模式</h2><p>实现宕机之后的一些切换，例如主宕掉，从变主。</p>
+<div class="hljs"><pre><code class="hljs bash"><span class="hljs-comment">#sentinel.conf</span>
+sentinel monitor &#123;name&#125; host port 1
+<span class="hljs-comment">#1代表此时多少个哨兵认为主服务器挂了，那么才切换主。</span></code></pre></div>
+
+<p>优点：主从复制，扩展高可用性，增加并发量提升吞吐性能。主从故障切换。</p>
+<p>缺点：redis 不好扩容。配置十分多。</p>
+<h2 id="缓存击穿（大量访问一个资源）"><a href="#缓存击穿（大量访问一个资源）" class="headerlink" title="缓存击穿（大量访问一个资源）"></a>缓存击穿（大量访问一个资源）</h2><p>解决： 加互斥锁，保证每个 key 只有一个线程能访问。</p>
+<ol start="2">
+<li>设置热点数据不过期。</li>
+</ol>
+<h2 id="缓存雪崩"><a href="#缓存雪崩" class="headerlink" title="缓存雪崩"></a>缓存雪崩</h2><p>指在某一个时间段，缓存集中过期。redis宕机。</p>
+<p>服务降级解决。跟 hystrix 那边解决的问题是类似的。</p>
+
             </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
                 
-
-<div class="text-center">
-  <div class="about-info">
-    <div class="about-name">Shelken</div>
-    <div class="about-intro"> 苦逼毕业生 </div>
-    <div class="about-icons">
-      
-        
-        
-        
-        <a target="_blank" rel="noopener" href="https://github.com/shelken" class="
-           hint--bottom hint--rounded"
-           aria-label=GitHub
-        >
-          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
-          
-        </a>
-      
-        
-        
-        
-        <a href="javascript:;" class="qr-trigger
-           "
-           
-        >
-          <i class="iconfont icon-wechat-fill" aria-hidden="true"></i>
-          
-            <img class="qr-img" src="/img/wechat-qrcode.JPG" srcset="/img/loading.gif" alt="qrcode" />
-          
-        </a>
-      
-    </div>
-  </div>
-</div>
-<div class="mt-5 markdown-body">
-  <h2 id="这里写关于页的正文，支持-Markdown-HTML"><a href="#这里写关于页的正文，支持-Markdown-HTML" class="headerlink" title="这里写关于页的正文，支持 Markdown, HTML-"></a>这里写关于页的正文，支持 Markdown, HTML-</h2><h3 id="dd"><a href="#dd" class="headerlink" title="dd"></a>dd</h3><h2 id="hdh"><a href="#hdh" class="headerlink" title="hdh"></a>hdh</h2>
-</div>
-
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/redis/">redis</a>
+                    
+                  </div>
+                
               </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/15/mall-%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">mall项目学习笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
-          </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
   </main>
 
@@ -300,6 +375,31 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
 
 
   <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
@@ -307,7 +407,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "关于&nbsp;",
+        "redis 学习笔记&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -350,6 +450,20 @@
   </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
 
 
 

@@ -177,6 +177,162 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/11/18/redis-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">redis 学习笔记</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/11/18/redis-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+          
+          
+            
+          
+          五大基本存储类型事务mutil exec discard 
+三种特殊类型geo hyperloglog bitmap
+持久化rdb 数据快照，与 appendonly.aof
+发布订阅主从复制#配置主从复制
+slaveof host port
+#想要持久配置，需在 redis.conf 修改
+
+#将自己配为主
+slaveof no one
+
+哨兵模式实现宕机之后的一些切换，例如主宕掉，从变主。
+#
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-18 11:30" pubdate>
+              2020-11-18
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/redis/">redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/11/15/mall-%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">mall项目学习笔记</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/11/15/mall-%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+          
+          
+            
+          
+          整合 Swagger2
+写入Config 时忘记加入 Configration 注解与@EnableSwagger2。
+
+MyBatis 重新运行时，sql 语句文件没有覆盖而是叠加。需要使用 版本1.3.7 以上，然后加上插件。
+&lt;!--生成mapper.xml时覆盖原文件--&gt;
+&lt;plugin type=&quot;org.mybatis.generator.plugins.
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-15 02:40" pubdate>
+              2020-11-15
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+            
+              <a href="/tags/mall/">mall</a>
+            
+              <a href="/tags/SpringBoot/">SpringBoot</a>
+            
+              <a href="/tags/Spring-Security/">Spring Security</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">数据结构和算法学习笔记</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+          
+          
+            
+          
+          要点HashMap 与 ConcurrentMap 和 LinkedHashMap 之间区别
+HashMap 与 LinkedHashMap 都不是线程安全的，ConcurrentMap 是
+
+LinkedHashMap在结构上是双向链表，因此可以双向遍历。且他是保证插入顺序的。HashMap 不保证插入顺序。
+
+HashMap 比 ConcurrentMap 会快
+
+
+
+哪种数据结构用于用Jav
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-13 12:57" pubdate>
+              2020-11-13
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+            
+              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/10/31/ffmpeg%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">ffmpeg使用笔记</a>
       </h1>
 
@@ -364,7 +520,11 @@ ffmpeg -f concat -i mylist.txt -c copy myvideo.mp4
           
           
 
+关于 JNDI
+Java 命名与目录接口（Java Naming and Directory Interface）
 
+为什么需要
+​    程序员应该不需要关心“具体的数据库后台是什么？JDBC驱动程序是什么？JDBC URL格式是什么？访问数据库的用户名和口令是什么？”等等这些问题，程序员编写的程序应该没有对 JDBC 驱动程序的引用，没有服务器名称，没有用户名称或口令 —— 甚至没有数据库
         </a>
       </p>
 
@@ -568,164 +728,6 @@ docker服务启动,重启,关闭命令
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/docker/">docker</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2020/10/13/sql-%E7%9B%B8%E5%85%B3%E7%9A%84%E9%87%8D%E7%82%B9%E7%9F%A5%E8%AF%86/" target="_self">
-          <img src="https://i.loli.net/2020/10/22/DoxUj83Pt7BWb4X.png" srcset="/img/loading.gif" alt="sql 相关的重点知识">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/13/sql-%E7%9B%B8%E5%85%B3%E7%9A%84%E9%87%8D%E7%82%B9%E7%9F%A5%E8%AF%86/">sql 相关的重点知识</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/13/sql-%E7%9B%B8%E5%85%B3%E7%9A%84%E9%87%8D%E7%82%B9%E7%9F%A5%E8%AF%86/">
-          
-          
-            
-          
-          SQL:结构化查询语言
-DDL：Data Definition Language
-DDL允许用户定义数据，也就是创建表、删除表、修改表结构这些操作。通常，DDL由数据库管理员执行。
-DML：Data Manipulation Language
-DML为用户提供添加、删除、更新数据的能力，这些是应用程序对数据库的日常操作。
-DQL：Data Query Language
-DQL允许用户查询数据，这也
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-13 23:26" pubdate>
-              2020-10-13
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/SQL/">SQL</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2020/10/05/Spring-Boot-%E7%AC%94%E8%AE%B0/" target="_self">
-          <img src="https://i.loli.net/2020/10/26/F4ZpmUCfdLsTzuX.png" srcset="/img/loading.gif" alt="Spring Boot 笔记">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/05/Spring-Boot-%E7%AC%94%E8%AE%B0/">Spring Boot 笔记</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/05/Spring-Boot-%E7%AC%94%E8%AE%B0/">
-          
-          
-            
-          
-          一、Spring Boot 入门1、Spring Boot 简介
-简化Spring应用开发的一个框架；
-整个Spring技术栈的一个大整合；
-J2EE开发的一站式解决方案；
-
-2、微服务2014，martin fowler
-微服务：架构风格（服务微化）
-一个应用应该是一组小型服务；可以通过HTTP的方式进行互通；
-单体应用：ALL IN ONE
-微服务：每一个功能元素最终都是一个可独立替换和独立升
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-05 00:57" pubdate>
-              2020-10-05
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Spring-Boot/">Spring Boot</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/06/13/%E7%BE%A4%E6%99%96%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/">群晖相关配置</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/06/13/%E7%BE%A4%E6%99%96%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/">
-          
-          
-            
-          
-          简介：群晖相关
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-13 23:26" pubdate>
-              2020-06-13
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E7%BE%A4%E6%99%96/">群晖</a>
-            
-              <a href="/tags/ubuntu/">ubuntu</a>
-            
-              <a href="/tags/pip/">pip</a>
-            
-              <a href="/tags/calibre/">calibre</a>
-            
-              <a href="/tags/emby/">emby</a>
             
           </div>
         
